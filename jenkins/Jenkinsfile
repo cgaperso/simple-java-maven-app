@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Add new Stage') {
+            steps {
+                echo 'New stage added !'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
